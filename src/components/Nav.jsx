@@ -45,7 +45,7 @@ const Nav = () => {
             </button>
             <Link href={"/profile"}>
               <Image
-                src={"/assets/icons/copy.svg"}
+                src={session?.user.image}
                 width={37}
                 height={37}
                 alt="profile"
@@ -57,6 +57,7 @@ const Nav = () => {
           <div>
             {providers &&
               Object.values(providers).map((provider) => {
+                console.log(provider);
                 return (
                   <button
                     type="button"
